@@ -1,4 +1,4 @@
-fitnesse-jdbc-slim [![Build Status](https://travis-ci.org/andreptb/fitnesse-jdbc-slim.svg)](https://travis-ci.org/andreptb/fitnesse-jdbc-slim)
+fitnesse-jdbc-slim [![Build Status](https://travis-ci.org/andreptb/fitnesse-jdbc-slim.svg)](https://travis-ci.org/andreptb/fitnesse-jdbc-slim) [![Coverage Status](https://coveralls.io/repos/andreptb/fitnesse-jdbc-slim/badge.svg)](https://coveralls.io/r/andreptb/fitnesse-jdbc-slim)
 ==============
 
 [FitNesse](https://github.com/unclebob/fitnesse) JDBC fixture in [slim format](http://www.fitnesse.org/FitNesse.UserGuide.WritingAcceptanceTests.SliM). Allows running SQL commands on multiple database connections. This project is licensed under [GNU 3.0](LICENSE).
