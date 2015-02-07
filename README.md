@@ -5,7 +5,7 @@ fitnesse-jdbc-slim [![Build Status](https://travis-ci.org/andreptb/fitnesse-jdbc
 
 #### Installation
 
-* This module and spring dependencies must in [FitNesse classpath](http://www.fitnesse.org/FitNesse.FullReferenceGuide.UserGuide.WritingAcceptanceTests.ClassPath). You can download all necessary jars from [here](link) or with [maven](https://github.com/lvonk/fitnesse-maven-classpath).
+* This module and spring dependencies must in [FitNesse classpath](http://www.fitnesse.org/FitNesse.FullReferenceGuide.UserGuide.WritingAcceptanceTests.ClassPath). You can download all necessary jars from [here](https://github.com/andreptb/fitnesse-jdbc-slim/releases/download/0.0.1/fitness-jdbc-slim-all-jars.zip) or with [maven](https://github.com/lvonk/fitnesse-maven-classpath).
 * The jdbc driver which the fixture will be used to connect also must be on [FitNesse](https://github.com/unclebob/fitnesse) classpath.
 
 ####  Sample:
