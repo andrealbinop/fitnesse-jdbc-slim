@@ -19,15 +19,35 @@
 
     <licenses>
         <license>
-            <name>GNU GPL, Version 3.0</name>
-            <url>http://www.gnu.org/licenses/gpl-3.0.txt</url>
+            <name>The MIT License (MIT)</name>
+            <url>http://opensource.org/licenses/MIT</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <scm>
-        <url>git@github.com:andreptb/fitnesse-jdbc-slim</url>
+        <connection>scm:git:git://github.com/andreptb/fitnesse-jdbc-slim.git</connection>
+        <developerConnection>scm:git:git@github.com:andreptb/fitnesse-jdbc-slim.git</developerConnection>
+        <url>https://github.com/andreptb/fitnesse-jdbc-slim</url>
     </scm>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.2.201409121644</version>
+                <executions>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
