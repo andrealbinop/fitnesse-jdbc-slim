@@ -1,11 +1,5 @@
 package org.andreptb.fitnesse;
 
-import fitnesse.ContextConfigurator;
-import fitnesse.FitNesseContext;
-import fitnesse.PluginException;
-import fitnesse.testrunner.MultipleTestsRunner;
-import fitnesse.testrunner.SuiteContentsFinder;
-import fitnesse.wiki.WikiPage;
 import org.hsqldb.jdbc.JDBCDriver;
 import org.junit.After;
 import org.junit.Assert;
@@ -15,7 +9,6 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 
