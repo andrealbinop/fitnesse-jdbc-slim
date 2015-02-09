@@ -2,3 +2,16 @@ language: java
 
 after_success:
   - mvn clean test jacoco:report org.eluder.coveralls:coveralls-maven-plugin:report
+  
+deploy:
+  provider: releases
+  api_key:
+    secure: OIJ/1TSmr7eZ+6Nwpf3v1ly43rhQbpoEVITHvjs3H/RhcE7vfZEmJwmgGsx/QtSobrCQfU22VGIzppiV/s3TrtyEsfNlS9kroGizIHG5iv0Brb77/GiRoStudIMxtNsiRstivLxlePVOs2wRcXm2NvCqEkSLf11uhH5ciBfKsB0=
+  file_glob: true
+  file: target/fitnesse-jdbc-slim-*.jar
+  
+after_deploy:
+    - echo "<settings><servers><server><id>ossrh</id><username>\${env.ossrh_username}</username><password>\${env.ossrh_password}</password></server></servers></settings>" > ~/settings.xml
+    - mvn deploy --settings ~/settings.xml
+    
+  
