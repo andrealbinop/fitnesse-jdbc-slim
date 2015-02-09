@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.andreptb</groupId>
+    <groupId>com.github.andreptb</groupId>
     <artifactId>fitnesse-jdbc-slim</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <name>fitnesse-jdbc-slim</name>
     <description>FitNesse JDBC fixture in slim format. Allows running SQL commands on multiple database connections.</description>
 
@@ -42,6 +42,19 @@
                         <id>prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.4</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
                         </goals>
                     </execution>
                 </executions>
