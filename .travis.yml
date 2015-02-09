@@ -21,5 +21,5 @@ after_deploy:
     - openssl aes-256-cbc -K $encrypted_db61717a69e2_key -iv $encrypted_db61717a69e2_iv -in ossrh_keys.tar.gz.enc -out ossrh_keys.tar.gz -d
     - tar -zxvf ossrh_keys.tar.gz
     - gpg --import private.key && gpg --import public.key
-    - echo "<settings><servers><server><id>ossrh</id><username>\${env.ossrh_username}</username><password>\${env.ossrh_password}</password></server></servers></settings>" > ~/settings.xml
-    - mvn deploy -DskipTests=true -Dgpg.passphrase=$ossrh_password -s ~/settings.xml -PactivateDeploy
+    - echo "<settings><servers><server><id>ossrh</id><username>\${env.ossrh_username}</username><password>\${env.ossrh_password}</password></server><server><id>gpg.passphrase</id><passphrase>\${env.ossrh_password}</passphrase></server></servers></settings>" > ~/settings.xml
+    - mvn deploy -DskipTests=true -s ~/settings.xml -PactivateDeploy
