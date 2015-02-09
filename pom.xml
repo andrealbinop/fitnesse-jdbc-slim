@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.andreptb</groupId>
@@ -9,6 +9,7 @@
     <version>0.0.2</version>
     <name>fitnesse-jdbc-slim</name>
     <description>FitNesse JDBC fixture in slim format. Allows running SQL commands on multiple database connections.</description>
+	<url>https://github.com/andreptb/fitnesse-jdbc-slim</url>
 
     <developers>
         <developer>
@@ -30,6 +31,21 @@
         <developerConnection>scm:git:git@github.com:andreptb/fitnesse-jdbc-slim.git</developerConnection>
         <url>https://github.com/andreptb/fitnesse-jdbc-slim</url>
     </scm>
+
+    <distributionManagement>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>ossrh</id>
+            <name>Open Source Software Repository Hosting</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+        <snapshotRepository>
+            <uniqueVersion>true</uniqueVersion>
+            <id>ossrh</id>
+            <name>Open Source Software Repository Hosting</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <build>
         <plugins>
