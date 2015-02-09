@@ -5,8 +5,18 @@ fitnesse-jdbc-slim [![Build Status](https://travis-ci.org/andreptb/fitnesse-jdbc
 
 #### Installation
 
-* This module and spring dependencies must in [FitNesse classpath](http://www.fitnesse.org/FitNesse.FullReferenceGuide.UserGuide.WritingAcceptanceTests.ClassPath). You can download all necessary jars from [here](https://github.com/andreptb/fitnesse-jdbc-slim/releases/download/0.0.1/fitness-jdbc-slim-all-jars.zip) or with [maven](https://github.com/lvonk/fitnesse-maven-classpath).
+* This module and spring dependencies must be in [FitNesse classpath](http://www.fitnesse.org/FitNesse.FullReferenceGuide.UserGuide.WritingAcceptanceTests.ClassPath). You can download all necessary jars from [here](https://github.com/andreptb/fitnesse-jdbc-slim/releases/download/0.0.1/fitness-jdbc-slim-all-jars.zip) or with [maven](https://github.com/lvonk/fitnesse-maven-classpath) (see below).
 * The jdbc driver which the fixture will be used to connect also must be on [FitNesse](https://github.com/unclebob/fitnesse) classpath.
+
+```xml
+<dependency>
+  <groupId>org.andreptb</groupId>
+  <artifactId>fitnesse-jdbc-slim</artifactId>
+  <version>0.0.1</version>
+</dependency>
+```
+
+**Important**: As for now the project must be [locally installed](http://maven.apache.org/plugins/maven-install-plugin/usage.html) so it can be included in pom.xml, until get's available in [maven central repository](https://issues.sonatype.org/browse/OSSRH-13726).
 
 ####  Sample:
 ```
