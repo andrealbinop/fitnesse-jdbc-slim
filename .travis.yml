@@ -1,12 +1,11 @@
 language: java
 
 env:
-  - secure: "VcFCgfU0RL8XIAurIktqdMwt7QkvEez/29VuPnoVEkjK5z2ckHUgFcORRWcZhJbXpQAFjPUQn04ZVRrcLJydhPpmHEX5DbJHU+cTtOesz9KtfPibBzVNfxpG8u00HI3QtpVI5B3uKXHNK87uqc7ZSucNIZVGpc2vWJojHDzxsr8="
-  - secure: "IjHCo9VdTid/nvtzztcBSEpXvW4+oi9dXN6jOQ4VveljL/wWzKguI/DpsEteSDFxMkOb0MeaVfs/2ZfdIYBgDIXb2nTHWvd6nn5h20tuuQI+5wJC1XWomN4zNPp9bRLBs2zTLnYa9NgF/VdbUHZS3POxJqVeXVW9Kz4nhICKaV4="
-  
+  secure: "dYMdByg1MudMtY9kfHdicsxAvq7XZ2kXbYOLqYXO4qyLSed35S1lLlKtcE7F8m5TrUNvFau9KPVfC3POxZ1O41TkIQ+4p87UsHhvpE8t+XiRYCS1l1aMLdb0IaeJJnUgz+VHAZctk3HkvupxdE6lvoIHPXGdWRCh8aCWb1TPn4k="
+
 after_success:
   - mvn clean test jacoco:report org.eluder.coveralls:coveralls-maven-plugin:report
-  
+
 deploy:
   provider: releases
   skip_cleanup: true
@@ -16,8 +15,8 @@ deploy:
   file: target/*.jar
   on:
     tags: true
-    all_branches: true  
-  
+    all_branches: true
+
 after_deploy:
     - openssl aes-256-cbc -K $encrypted_db61717a69e2_key -iv $encrypted_db61717a69e2_iv -in ossrh_keys.tar.gz.enc -out ossrh_keys.tar.gz -d
     - tar -zxvf ossrh_keys.tar.gz
