@@ -9,10 +9,14 @@ after_success:
   
 deploy:
   provider: releases
+  skip_cleanup: true
   api_key:
     secure: OIJ/1TSmr7eZ+6Nwpf3v1ly43rhQbpoEVITHvjs3H/RhcE7vfZEmJwmgGsx/QtSobrCQfU22VGIzppiV/s3TrtyEsfNlS9kroGizIHG5iv0Brb77/GiRoStudIMxtNsiRstivLxlePVOs2wRcXm2NvCqEkSLf11uhH5ciBfKsB0=
   file_glob: true
   file: target/*.jar
+  on:
+    tags: true
+    all_branches: true  
   
 after_deploy:
     - openssl aes-256-cbc -K $encrypted_db61717a69e2_key -iv $encrypted_db61717a69e2_iv -in ossrh_keys.tar.gz.enc -out ossrh_keys.tar.gz -d
