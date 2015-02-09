@@ -11,8 +11,7 @@ deploy:
   skip_cleanup: true
   api_key:
     secure: OIJ/1TSmr7eZ+6Nwpf3v1ly43rhQbpoEVITHvjs3H/RhcE7vfZEmJwmgGsx/QtSobrCQfU22VGIzppiV/s3TrtyEsfNlS9kroGizIHG5iv0Brb77/GiRoStudIMxtNsiRstivLxlePVOs2wRcXm2NvCqEkSLf11uhH5ciBfKsB0=
-  file_glob: true
-  file: target/*.jar
+  file: target/fitnesse-jdbc-slim-$TRAVIS_TAG.jar
   on:
     tags: true
     all_branches: true
