@@ -19,4 +19,4 @@ after_deploy:
     - tar -zxvf ossrh_keys.tar.gz
     - gpg --import private.key && gpg --import public.key
     - echo "<settings><servers><server><id>ossrh</id><username>\${env.ossrh_username}</username><password>\${env.ossrh_password}</password></server></servers></settings>" > ~/settings.xml
-    - mvn deploy -DskipTests=true --settings ~/settings.xml -Dgpg.passphrase=$ossrh_password
+    - mvn deploy -DskipTests=true -Dgpg.passphrase=$ossrh_password -s ~/settings.xml -PactivateDeploy
