@@ -4,15 +4,15 @@ env:
   secure: "JOK91tQnG9qaFQtidimKZJR6GUtjZw09PQ5dMavk89as5A7M4f00xwVSBHNQMFgtLzuej4K/OXEbj6pwKpNaE9i04KrwShnaHNLS23ePI2yYTx9VwpEraGdkNO7fzZ8IC9cCg0j8iTVGU+qLSwZ5booLJxgGnJ8QirZ6rayY/4M="
 
 after_success:
-  - mvn test jacoco:report org.eluder.coveralls:coveralls-maven-plugin:report
+  - mvn clean test jacoco:report org.eluder.coveralls:coveralls-maven-plugin:report
 
 deploy:
   provider: releases
-  local-dir: target
   skip_cleanup: true
   api_key:
     secure: OIJ/1TSmr7eZ+6Nwpf3v1ly43rhQbpoEVITHvjs3H/RhcE7vfZEmJwmgGsx/QtSobrCQfU22VGIzppiV/s3TrtyEsfNlS9kroGizIHG5iv0Brb77/GiRoStudIMxtNsiRstivLxlePVOs2wRcXm2NvCqEkSLf11uhH5ciBfKsB0=
-  file: fitnesse-jdbc-slim-$TRAVIS_TAG.jar
+  file: ~/.m2/repository/com/github/andreptb/fitnesse-jdbc-slim/$TRAVIS_TAG/*.jar
+  file_glob: true
   on:
     tags: true
     all_branches: true
