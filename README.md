@@ -26,7 +26,7 @@ fitnesse-jdbc-slim [![Build Status](https://travis-ci.org/andreptb/fitnesse-jdbc
 
 |script|
 |connect jdbc on | ${DATABASE_NAME} | with url | ${DATABASE_URL} | and driver | ${DRIVER_CLASS_NAME | and username | ${DATABASE_USERNAME} | and password | ${DATABASE_PASSWORD} | # registers the ${DATABASE_NAME} database, must be the done before running SQL commands 
-|run in | ${DB} | CREATE TABLE USER (ID BIGINT IDENTITY, NAME VARCHAR(255) NOT NULL, PASSWORD VARCHAR(255) NOT NULL) | # runs the command CREATE TABLE, only fails if an exception occurs.
-|run in | ${DB} | INSERT INTO USER (NAME, PASSWORD) VALUES ('user1', 'password1') | # runs the command INSERT, only fails if an exception occurs.
-|$usernameId= | query in | ${DB} | SELECT ID FROM USER WHERE NAME = 'user1' | # runs a SELECT command, assigns the value of the first column of the first row to the variable $usernameId. If was an UPDATE command, would return the updated rows count.
+|run in | ${DATABASE_NAME} | CREATE TABLE USER (ID BIGINT IDENTITY, NAME VARCHAR(255) NOT NULL, PASSWORD VARCHAR(255) NOT NULL) | # runs the command CREATE TABLE, only fails if an exception occurs.
+|run in | ${DATABASE_NAME} | INSERT INTO USER (NAME, PASSWORD) VALUES ('user1', 'password1') | # runs the command INSERT, only fails if an exception occurs.
+|$usernameId= | query in | ${DATABASE_NAME} | SELECT ID FROM USER WHERE NAME = 'user1' | # runs a SELECT command, assigns the value of the first column of the first row to the variable $usernameId. If was an UPDATE command, would return the updated rows count.
 ```
