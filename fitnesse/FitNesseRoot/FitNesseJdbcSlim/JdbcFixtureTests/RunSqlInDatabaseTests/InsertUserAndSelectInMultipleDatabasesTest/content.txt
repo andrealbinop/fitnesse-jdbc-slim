@@ -1,0 +1,5 @@
+!define PASSWORD {password1}
+
+| script  |
+| ensure | run in | ${DATABASE} | the sql | INSERT INTO USER (NAME, PASSWORD) VALUES ('user1', '${PASSWORD}') |
+| check | query in | ${DATABASE} | with sql | SELECT PASSWORD FROM USER WHERE NAME = 'user1' | ${PASSWORD} |

@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20150424</FitNesseVersion>
+  <rootPath>FitNesseJdbcSlim.JdbcFixtureTests.RunSqlInDatabaseTests.InsertUserAndSelectInMultipleDatabasesTest</rootPath>
+    <result>
+    <counts>
+      <right>2</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+   <runTimeInMillis>314</runTimeInMillis>
+    <content></content>
+    <relativePageName>SuiteSetUp</relativePageName>
+            <instructions>
+            <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='com.github.andreptb.fitnesse'}</instruction>
+        <slimResult>pass(com.github.andreptb.fitnesse)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>import_0_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ImportExpectation</type>
+                                        <evaluationMessage>com.github.andreptb.fitnesse</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='library_1_0', instruction='make', instanceName='library1', className='JdbcFixture', args=[]}</instruction>
+        <slimResult>pass(jdbc fixture)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>library_1_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ConstructionExpectation</type>
+                                        <evaluationMessage>jdbc fixture</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_0', instruction='call', instanceName='scriptTableActor', methodName='connectJdbcOnWithUrlAndDriverAndUsernameAndPassword', args=[testdb, jdbc:hsqldb:mem:testdb, org.hsqldb.jdbc.JDBCDriver, sa, ]}</instruction>
+        <slimResult>pass()</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ScriptActionExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_1', instruction='call', instanceName='scriptTableActor', methodName='runInTheSql', args=[testdb, CREATE TABLE USER (ID BIGINT IDENTITY, NAME VARCHAR(255) NOT NULL, PASSWORD VARCHAR(255) NOT NULL)]}</instruction>
+        <slimResult>pass()</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_1</instructionId>
+                    <col>0</col>
+                              <row>2</row>
+                    <type>ScriptActionExpectation</type>
+                                      </expectation>
+              </instructionResult>
+          </instructions>
+      </result>
+    <result>
+    <counts>
+      <right>2</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+   <runTimeInMillis>11</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;com.github.andreptb.fitnesse&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+ &lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;library&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;jdbc fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="10"&gt;script&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;connect jdbc on&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;testdb&lt;/td&gt;
+		&lt;td&gt;with url&lt;/td&gt;
+		&lt;td&gt;jdbc:hsqldb:mem:testdb&lt;/td&gt;
+		&lt;td&gt;and driver&lt;/td&gt;
+		&lt;td&gt;org.hsqldb.jdbc.JDBCDriver&lt;/td&gt;
+		&lt;td&gt;and username&lt;/td&gt;
+		&lt;td&gt;sa&lt;/td&gt;
+		&lt;td&gt;and password&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;run in&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;testdb&lt;/td&gt;
+		&lt;td&gt;the sql&lt;/td&gt;
+		&lt;td colspan="7"&gt;CREATE TABLE USER (ID BIGINT IDENTITY, NAME VARCHAR(255) NOT NULL, PASSWORD VARCHAR(255) NOT NULL)&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;span class="meta"&gt;variable defined: PASSWORD=password1&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="6"&gt;script&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;ensure&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;run in&lt;/td&gt;
+		&lt;td&gt;testdb&lt;/td&gt;
+		&lt;td&gt;the sql&lt;/td&gt;
+		&lt;td colspan="2"&gt;INSERT INTO USER (NAME, PASSWORD) VALUES ('user1', 'password1')&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;query in&lt;/td&gt;
+		&lt;td&gt;testdb&lt;/td&gt;
+		&lt;td&gt;with sql&lt;/td&gt;
+		&lt;td&gt;SELECT PASSWORD FROM USER WHERE NAME = 'user1'&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;password1&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>InsertUserAndSelectInMultipleDatabasesTest</relativePageName>
+            <instructions>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_0', instruction='call', instanceName='scriptTableActor', methodName='runInTheSql', args=[testdb, INSERT INTO USER (NAME, PASSWORD) VALUES ('user1', 'password1')]}</instruction>
+        <slimResult>pass()</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_0_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>EnsureActionExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_1', instruction='call', instanceName='scriptTableActor', methodName='queryInWithSql', args=[testdb, SELECT PASSWORD FROM USER WHERE NAME = 'user1']}</instruction>
+        <slimResult>pass(password1)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_0_1</instructionId>
+                    <col>5</col>
+                              <row>2</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>password1</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+          </instructions>
+      </result>
+    <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>/usr/lib/jvm/java-8-jdk/bin/java -cp fitnesse.jar:/home/andre/Dev/github/fitnesse-jdbc-slim/target/classes:/home/andre/.m2/repository/org/fitnesse/fitnesse/20150424/fitnesse-20150424.jar:/home/andre/.m2/repository/org/htmlparser/htmlparser/2.1/htmlparser-2.1.jar:/home/andre/.m2/repository/org/htmlparser/htmllexer/2.1/htmllexer-2.1.jar:/home/andre/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar:/home/andre/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar:/home/andre/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/andre/.m2/repository/org/json/json/20140107/json-20140107.jar:/home/andre/.m2/repository/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.jar:/home/andre/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/3.6.2.201501210735-r/org.eclipse.jgit-3.6.2.201501210735-r.jar:/home/andre/.m2/repository/com/jcraft/jsch/0.1.50/jsch-0.1.50.jar:/home/andre/.m2/repository/com/googlecode/javaewah/JavaEWAH/0.7.9/JavaEWAH-0.7.9.jar:/home/andre/.m2/repository/org/apache/httpcomponents/httpclient/4.1.3/httpclient-4.1.3.jar:/home/andre/.m2/repository/org/apache/httpcomponents/httpcore/4.1.4/httpcore-4.1.4.jar:/home/andre/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar:/home/andre/.m2/repository/org/springframework/spring-jdbc/4.1.7.RELEASE/spring-jdbc-4.1.7.RELEASE.jar:/home/andre/.m2/repository/org/springframework/spring-beans/4.1.7.RELEASE/spring-beans-4.1.7.RELEASE.jar:/home/andre/.m2/repository/org/springframework/spring-core/4.1.7.RELEASE/spring-core-4.1.7.RELEASE.jar:/home/andre/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/andre/.m2/repository/org/springframework/spring-tx/4.1.7.RELEASE/spring-tx-4.1.7.RELEASE.jar:/home/andre/.m2/repository/org/hsqldb/hsqldb/2.3.2/hsqldb-2.3.2.jar:/home/andre/.m2/repository/org/fitnesse/plugins/maven-classpath-plugin/1.9/maven-classpath-plugin-1.9.jar:/home/andre/.m2/repository/org/apache/maven/maven-embedder/3.0.4/maven-embedder-3.0.4.jar:/home/andre/.m2/repository/org/apache/maven/maven-settings/3.0.4/maven-settings-3.0.4.jar:/home/andre/.m2/repository/org/apache/maven/maven-core/3.0.4/maven-core-3.0.4.jar:/home/andre/.m2/repository/org/apache/maven/maven-model/3.0.4/maven-model-3.0.4.jar:/home/andre/.m2/repository/org/apache/maven/maven-settings-builder/3.0.4/maven-settings-builder-3.0.4.jar:/home/andre/.m2/repository/org/apache/maven/maven-repository-metadata/3.0.4/maven-repository-metadata-3.0.4.jar:/home/andre/.m2/repository/org/apache/maven/maven-artifact/3.0.4/maven-artifact-3.0.4.jar:/home/andre/.m2/repository/org/apache/maven/maven-aether-provider/3.0.4/maven-aether-provider-3.0.4.jar:/home/andre/.m2/repository/org/sonatype/aether/aether-spi/1.13.1/aether-spi-1.13.1.jar:/home/andre/.m2/repository/org/sonatype/aether/aether-impl/1.13.1/aether-impl-1.13.1.jar:/home/andre/.m2/repository/org/sonatype/aether/aether-api/1.13.1/aether-api-1.13.1.jar:/home/andre/.m2/repository/org/sonatype/aether/aether-util/1.13.1/aether-util-1.13.1.jar:/home/andre/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.14/plexus-interpolation-1.14.jar:/home/andre/.m2/repository/org/apache/maven/maven-plugin-api/3.0.4/maven-plugin-api-3.0.4.jar:/home/andre/.m2/repository/org/apache/maven/maven-model-builder/3.0.4/maven-model-builder-3.0.4.jar:/home/andre/.m2/repository/org/apache/maven/maven-compat/3.0.4/maven-compat-3.0.4.jar:/home/andre/.m2/repository/org/apache/maven/wagon/wagon-provider-api/2.2/wagon-provider-api-2.2.jar:/home/andre/.m2/repository/org/codehaus/plexus/plexus-utils/2.0.6/plexus-utils-2.0.6.jar:/home/andre/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.4/plexus-classworlds-2.4.jar:/home/andre/.m2/repository/org/sonatype/sisu/sisu-inject-plexus/2.3.0/sisu-inject-plexus-2.3.0.jar:/home/andre/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.3.0/sisu-inject-bean-2.3.0.jar:/home/andre/.m2/repository/org/sonatype/sisu/sisu-guice/3.1.0/sisu-guice-3.1.0-no_aop.jar:/home/andre/.m2/repository/org/sonatype/sisu/sisu-guava/0.9.9/sisu-guava-0.9.9.jar:/home/andre/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar:/home/andre/.m2/repository/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar:/home/andre/.m2/repository/org/sonatype/plexus/plexus-cipher/1.7/plexus-cipher-1.7.jar:/home/andre/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar:/home/andre/.m2/repository/commons-cli/commons-cli/1.3/commons-cli-1.3.jar fitnesse.slim.SlimService 8088</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>    <stdErr></stdErr>  </executionLog>
+  <finalCounts>
+    <right>2</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>621</totalRunTimeInMillis>
+</testResults>
+

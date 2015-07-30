@@ -1,0 +1,9 @@
+!1 [[fitnesse-jdbc-slim][https://github.com/andreptb/fitnesse-jdbc-slim]] [[!img https://travis-ci.org/andreptb/fitnesse-jdbc-slim.svg][https://travis-ci.org/andreptb/fitnesse-jdbc-slim]] [[!img https://maven-badges.herokuapp.com/maven-central/com.github.andreptb/fitnesse-jdbc-slim/badge.svg][https://maven-badges.herokuapp.com/maven-central/com.github.andreptb/fitnesse-jdbc-slim/]] [[!img http://javadoc-badge.appspot.com/com.github.andreptb/fitnesse-jdbc-slim.svg?label=javadoc][http://andreptb.github.io/fitnesse-jdbc-slim/apidocs/index.html]] [[!img https://badges.gitter.im/Join%20Chat.svg][https://gitter.im/andreptb/fitnesse-jdbc-slim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge]]
+
+FitNesse Jdbc fixture in [[slim format][http://www.fitnesse.org/FitNesse.UserGuide.WritingAcceptanceTests.SliM]]. Resembles [[Xebium][http://xebia.github.io/Xebium/]], but it's even more similar to [[Jdbc IDE Firefox Plugin][http://www.jdbchq.org/projects/ide/]]. Also gets inspiration from [[hsac-fitnesse-fixtures][https://github.com/fhoeben/hsac-fitnesse-fixtures]] but doesn't try to "simplify" Jdbc IDE development flow. This project is licensed under [[MIT][https://github.com/andreptb/fitnesse-jdbc-slim/blob/master/LICENSE]].
+
+!3  Getting started
+
+This plugin is tested using FitNesse itself, click !-<b>Suite</b>-! button on top of the page to run them. Remember you must run [[FitNesse][https://github.com/unclebob/fitnesse]] properly for this project so the tests can work, check the [[README.md][https://github.com/andreptb/fitnesse-jdbc-slim/blob/master/README.md]] for more information.    
+
+!contents -R2 -g -p -f -h

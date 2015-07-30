@@ -1,0 +1,4 @@
+!define TEST_SYSTEM {slim}
+!define DATABASE {testdb}
+
+!contents -R2 -g -p -f -h

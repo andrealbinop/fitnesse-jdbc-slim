@@ -1,0 +1,9 @@
+|import|
+|com.github.andreptb.fitnesse| 
+ 
+|library|
+|jdbc fixture|
+
+| script  |
+| connect jdbc on | ${DATABASE} | with url | jdbc:hsqldb:mem:testdb | and driver | !-org.hsqldb.jdbc.JDBCDriver-! | and username | sa | and password | |
+| run in | ${DATABASE} | the sql | CREATE TABLE USER (ID BIGINT IDENTITY, NAME VARCHAR(255) NOT NULL, PASSWORD VARCHAR(255) NOT NULL) |
